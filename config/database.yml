@@ -1,0 +1,19 @@
+# postgres
+# gem 'pg'
+
+common: &common
+  adapter: postgresql
+  username: scott
+  password:  # from psql setup, see Postgresql
+
+development:
+  <<: *common
+  database: bubibottle_development
+
+test:
+  <<: *common
+  database: bubibottle_test
+
+production:
+  <<: *common
+  database: bubibottle_production
