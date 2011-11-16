@@ -1,0 +1,19 @@
+// Place all the styles related to the homes controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+ul.tabs {
+  list-style-type: none;
+  li {
+    display: inline;
+    padding: 5px;
+    a {
+      color: black;
+      text-decoration: none;
+      font-size: 18px;
+      padding: 4px;
+    }
+    a:hover {
+      color: white;
+    }
+  }  
+}

@@ -1,4 +1,16 @@
 Bubibottle::Application.routes.draw do
+  root :to => 'home#index'
+  match 'home/' => 'home#index'
+  match '/index' => 'home#index'
+  match '/home' => 'home#index'
+  match '/why' => 'home#why'
+  match '/care' => 'home#care'
+  match '/faq' => 'home#faq'
+  match '/testimonials' => 'home#testimonials'
+  match '/inventor' => 'home#inventor'
+  match '/customize' => 'home#customize'
+  match '/buy' => 'home#buy'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

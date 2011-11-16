@@ -1,14 +1,38 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Bubibottle</title>
+  <title>Bübi Bottle</title>
   <%= stylesheet_link_tag    "application" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
+	<div class="container_16">
+		<div id="header" class="grid_16 alpha">
+			<%= render 'layouts/header' %>
+		</div>
+		<div id="action" class="grid_4">
+			<%= render 'layouts/action' %>
+		</div>	
+		<div id="flash_error" class="grid_10 prefix_1 suffix_1">	
+			<%= (render 'layouts/error', {:error => flash[:error]}) if flash[:error] %>
+		</div>
+		<div id="flash_notice" class="grid_10 prefix_1 suffix_1">	
+			<%= (render 'layouts/notice', {:notice => flash[:notice]}) if flash[:notice] %>
+		</div>
+		<div id="main"  class="grid_10 prefix_1 suffix_1 omega">
+			<%= yield %>
+		</div>
+		<div class="clear"></div>			
+		<div id="footer" class="grid_16">
+			<%= render 'layouts/footer' %>
+		</div>
+		<div class="clear"></div>
+	</div>
+	
 
 </body>
 </html>
+
+
+
