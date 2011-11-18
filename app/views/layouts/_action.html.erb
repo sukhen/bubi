@@ -1,2 +1,6 @@
 <%= image_tag("http://placehold.it/250x450&text=Big%20Bübi%20Bottle")%>
-<%= image_tag("http://placehold.it/250x100&text=BUY NOW!")%>
+<% unless params[:action] == "buy" %>
+	<div id="buy_now">
+		<%= link_to("Buy Now!", "/buy", :class => "button")%>
+	</div>
+<% end -%>		

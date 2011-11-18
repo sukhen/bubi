@@ -1,0 +1,30 @@
+ul#socialicons {
+  li {
+    
+    padding: 0;
+    list-style: none;
+    background-repeat: no-repeat;
+    a, a:hover {
+      margin: 10px;
+      width: 60px;
+      height: 60px;
+      display: block;
+      float: left;
+      background-color: inherit;
+    }
+  }
+  
+  li.twitter a { 
+    background-repeat: no-repeat;
+    background-image: url("social/twitter.png"); 
+  } 
+  li.facebook a { 
+    background-repeat: no-repeat;
+    background-image: url("social/facebook.png"); 
+  }  
+  li.email a { 
+    background-repeat: no-repeat;
+    background-image: url("social/email.png"); 
+  } 
+}
+
