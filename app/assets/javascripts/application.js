@@ -7,3 +7,18 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+
+
+$(document).ready(function() {
+   $(function() {
+     $('#big_bottle').crossSlide({
+       sleep: 3,
+       fade: 1
+     }, [
+       { src: 'assets/products/pink_4.png' },
+       { src: 'assets/products/pink_5.png' },
+       { src: 'assets/products/pink_6.png' }
+     ])
+   });
+   
+});

@@ -1,0 +1,10 @@
+<div id="<%= product.color %>" class="<%= 'product ' + cycle('grid_3', 'grid_3', 'grid_3 suffix_1 omega')%>">
+	<div class="image_wrapper">
+		<%= image_tag(product.image_path, :class =>"product_image")%>
+	</div>
+	<div class="text_wrapper">
+		<%= product.color.capitalize %><br />
+		<%= "$#{product.price}" %>
+		<%= button_to("Add", "/buy", :class => "add", :confirm => "This will eventually add to cart.")%>
+	</div>		
+</div>

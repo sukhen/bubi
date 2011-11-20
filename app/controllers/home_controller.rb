@@ -29,7 +29,7 @@ class HomeController < ApplicationController
   end
   
   def buy
-    
+    @products = Product.all
   end
   
 end
