@@ -8,5 +8,5 @@
 
 colors = ['red', 'blue', 'pink', 'green', 'orange', 'yellow', 'teal', 'purple', 'smoke']
 colors.each do |color|
-  Product.create({headline: "Bubi Bottle", body: "",  image_path: "products/#{color}.png", list_price: 2999, color: color})
+  Product.create({headline: "Bubi Bottle", body: "",  image_path: "products/#{color}.png", list_price: 29.99, color: color})
 end  

@@ -1,4 +1,8 @@
 Bubibottle::Application.routes.draw do
+  
+  resources :line_items
+  resources :carts
+
   root :to => 'home#index'
   match 'home/' => 'home#index'
   match '/index' => 'home#index'
