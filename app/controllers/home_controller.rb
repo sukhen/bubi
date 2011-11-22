@@ -30,6 +30,7 @@ class HomeController < ApplicationController
   
   def buy
     @products = Product.all
+    @cart = current_cart
   end
   
 end

@@ -28,6 +28,16 @@ div#big_bottle {
   }  
 }
 
+div#shopping_cart {
+  margin: 10px;
+  width: 200px;
+  ul {
+    padding: 0px;
+    list-style-type: none; 
+  }
+    
+}
+
 div#buy_now{
   line-height:45px;
   a {

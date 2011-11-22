@@ -3,7 +3,9 @@
 <div id="big_bottle">
 	<!-- js place holder for bottle transitions  -->
 </div>	
-<% unless params[:action] == "buy" %>
+<% if params[:action] == "buy" %>
+	<%= render :partial => "cart", :locals => { :cart => @cart, :notice => notice }%>
+<% else -%>
 	<div id="buy_now">
 		<%= link_to("Buy Now!", "/buy", :class => "button")%>
 	</div>

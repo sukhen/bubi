@@ -2,12 +2,16 @@ class LineItemsController < ApplicationController
   # GET /line_items
   # GET /line_items.json
   def index
-    @line_items = LineItem.all
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @line_items }
-    end
+    # Im using this to clear the cart
+    session[:cart_id] = nil
+    redirect_to controller: "home", action: "buy"
+    
+    # @line_items = LineItem.all
+    # 
+    # respond_to do |format|
+    #   format.html # index.html.erb
+    #   format.json { render json: @line_items }
+    # end
   end
 
   # GET /line_items/1
@@ -41,11 +45,11 @@ class LineItemsController < ApplicationController
   def create
     @cart = current_cart
     product = Product.find(params[:product_id])
-    @line_item = @cart.line_items.build(:product => product)
+    @line_item = @cart.add_product(product.id)
 
     respond_to do |format|
       if @line_item.save
-        format.html { redirect_to @line_item.cart, notice: 'Line item was successfully created.' }
+        format.html { redirect_to controller: "home", action: "buy", notice: 'Line item was successfully created.' }
         format.json { render json: @line_item, status: :created, location: @line_item }
       else
         format.html { render action: "new" }
