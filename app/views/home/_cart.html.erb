@@ -9,5 +9,7 @@
 		<% end%>
 		<li><%= cart.display_price.html_safe %></li>
 	</ul>
-	<%= button_to("Clear", line_items_path, :class => "add", :method => "get" )%>
+	
+	<%= button_to("Order", cart_path(cart), :class => "add", :method => "get" )%>
+	<%= button_to("Empty", line_items_path, :class => "add", :method => "get" )%>
 </div>
